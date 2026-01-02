@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SocialBoost – Social Media Services</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{margin:0;font-family:Arial;background:#0b0f1a;color:#fff}
+header{background:#000;padding:15px;text-align:center;font-size:22px}
+section{padding:40px 20px;text-align:center}
+.card{background:#12192c;padding:20px;border-radius:10px;max-width:420px;margin:15px auto}
+input,select,button{width:100%;padding:12px;margin:8px 0;border:none;border-radius:6px}
+button{background:#00e0ff;font-weight:bold;cursor:pointer}
+.hidden{display:none}
+footer{background:#000;padding:20px;text-align:center}
+a{color:#00e0ff;text-decoration:none}
+</style>
+</head>
+<body>
+
+<header>🚀 SocialBoost</header>
+
+<!-- HOME -->
+<section>
+<h1>Boost Your Social Media Presence</h1>
+<p>We provide Instagram, YouTube, Telegram & TikTok followers, likes & views.</p>
+<a href="#login">Get Started</a>
+</section>
+
+<!-- ABOUT -->
+<section>
+<h2>About Us</h2>
+<p>
+SocialBoost is an Indian SMM platform helping creators & businesses grow faster.
+We provide high-quality engagement at affordable prices with fast delivery.
+</p>
+</section>
+
+<!-- SERVICES -->
+<section>
+<h2>Our Services</h2>
+<div class="card">📸 Instagram Followers / Likes / Views</div>
+<div class="card">▶️ YouTube Subscribers / Views</div>
+<div class="card">📢 Telegram Members / Views</div>
+<div class="card">🎵 TikTok Followers / Likes</div>
+</section>
+
+<!-- LOGIN -->
+<section id="login">
+<div class="card" id="loginBox">
+<h2>Login / Signup</h2>
+<input id="email" placeholder="Email">
+<input id="password" type="password" placeholder="Password">
+<button onclick="login()">Login</button>
+<button onclick="signup()">Signup</button>
+<hr>
+<button onclick="googleLogin()">Continue with Google</button>
+</div>
+</section>
+
+<!-- DASHBOARD -->
+<section>
+<div class="card hidden" id="dashboard">
+<h2>Place Order</h2>
+
+<select id="service">
+<option>Instagram Followers</option>
+<option>Instagram Likes</option>
+<option>YouTube Subscribers</option>
+<option>Telegram Views</option>
+<option>TikTok Likes</option>
+</select>
+
+<input id="link" placeholder="Profile / Post Link">
+<input id="qty" placeholder="Quantity">
+
+<select onchange="showPayment(this.value)">
+<option value="">Select Payment</option>
+<option value="upi">UPI</option>
+<option value="qr">QR</option>
+</select>
+
+<div id="upi" class="hidden">
+<p>Pay via UPI: <b>yourupi@upi</b></p>
+</div>
+
+<div id="qr" class="hidden">
+<p>Scan QR</p>
+<img src="qr.png" width="200">
+</div>
+
+<button onclick="placeOrder()">Confirm Order</button>
+<button onclick="logout()">Logout</button>
+</div>
+</section>
+
+<footer>
+© 2026 SocialBoost • All Rights Reserved
+</footer>
+
+<script type="module" src="firebase.js"></script>
+</body>
+</html>
